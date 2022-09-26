@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ParseJSSettingsGUI</class>
+ <widget class="QDialog" name="ParseJSSettingsGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>663</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushSaveSettings">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>300</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>640</width>
+     <height>282</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QCheckBox" name="checkBoxAllowRunningInsecureContent">
+      <property name="text">
+       <string>запускать JavaScript, CSS, плагины или веб-сокеты из URL-адресов HTTP</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxJavascriptCanOpenWindows">
+      <property name="text">
+       <string>открывать JavaScript`ом всплывающие окна без участия пользователя</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxAllowWindowActivationFromJavaScript">
+      <property name="text">
+       <string>активировать окна с помощью метода JavaScript window.focus ()</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxScreenCaptureEnabled">
+      <property name="text">
+       <string>включить захват экрана</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxFocusOnNavigationEnabled">
+      <property name="text">
+       <string>ассоциация со страницей, когда происходит операция навигации</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxFullScreenSupportEnabled">
+      <property name="text">
+       <string>поддержка полного экрана</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxHyperlinkAuditingEnabled">
+      <property name="text">
+       <string>опрос заданных URL в случае успешного перехода пользователем на URL, обозначенный в href</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxPlaybackRequiresUserGesture">
+      <property name="text">
+       <string>запрет воспроизведения мультимед.контента, до запуска пользователем</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxLocalContentCanAccessFileUrls">
+      <property name="text">
+       <string>разрешить локально загруженным документам получать доступ к другим локальным URL-адресам</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxLocalContentCanAccessRemoteUrls">
+      <property name="text">
+       <string>разрешить локально загруженным документам игнорировать правила перекрестного происхождения</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxPdfViewerEnabled">
+      <property name="text">
+       <string>включить PDF viewer </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushClose">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>300</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushSaveSettings</sender>
+   <signal>clicked()</signal>
+   <receiver>ParseJSSettingsGUI</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>507</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushClose</sender>
+   <signal>clicked()</signal>
+   <receiver>ParseJSSettingsGUI</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>618</x>
+     <y>312</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>301</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

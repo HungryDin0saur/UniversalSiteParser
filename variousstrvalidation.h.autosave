@@ -1,0 +1,18 @@
+#ifndef VARIOUSSTRVALIDATION_H
+#define VARIOUSSTRVALIDATION_H
+
+#include <QObject>
+
+class VariousStrValidation : public QObject
+{
+    Q_OBJECT
+public:
+    explicit VariousStrValidation(QObject *parent = nullptr);
+
+signals:
+    
+public slots
+
+};
+
+#endif // VARIOUSSTRVALIDATION_H

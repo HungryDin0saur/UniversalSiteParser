@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ParseSetting</class>
+ <widget class="QDialog" name="ParseSetting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::PreventContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushSetSetting">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>520</y>
+     <width>161</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>Сохранить профиль</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>298</width>
+     <height>186</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="labelAddressSite">
+        <property name="text">
+         <string>Адрес сайта</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="urlEdit">
+        <property name="text">
+         <string>https://habr.com/ru/hub/crypto/top100/</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="labelSetNameSite">
+        <property name="text">
+         <string>Название профиля настроек</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditFileName">
+        <property name="text">
+         <string>habr</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelSetDir">
+        <property name="text">
+         <string>Дирректория для сохранения собранных данных</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLineEdit" name="lineDirToDBEdit">
+        <property name="text">
+         <string>D:/Download/saveSites/LoadHabr/</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushSelectDir">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>Выбрать дирректорию</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>200</y>
+     <width>321</width>
+     <height>46</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item>
+     <widget class="QLabel" name="labelRegExp">
+      <property name="text">
+       <string>Регулярные выражения:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBoxRegExpr">
+      <property name="focusPolicy">
+       <enum>Qt::WheelFocus</enum>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>110</y>
+     <width>179</width>
+     <height>74</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_10">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_9">
+      <item>
+       <widget class="QLabel" name="labelParseDepth">
+        <property name="text">
+         <string>Глубина парсинга</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinBoxParseDepth">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>2147483646</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxParseDepth">
+      <property name="text">
+       <string>Задать глубину парсинга</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>371</y>
+     <width>195</width>
+     <height>160</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="QCheckBox" name="checkBoxUrlSwype">
+      <property name="text">
+       <string>Переход по страницам в url</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="minNextPagesParse">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="maxNextPagesParse">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboEditUrlSwype">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Регулярное выражение для перелистываня страниц при парсинге. При выборе второго варианта место для номера страницы указывается символом %&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboEditUrlSwypeRegExp">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Регулярное выражение для перелистываня страниц при парсинге. При выборе второго варианта место для номера страницы указывается символом %&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>10</y>
+     <width>331</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <widget class="QCheckBox" name="checkBoxTuneParseJS">
+      <property name="text">
+       <string> Парсинг Java скриптов</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBoxJSRegExp">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::WheelFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Регулярные выражения для скриптов необходимо устанавливать в том порядке, в котором скрипты буду запускаться&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushParseJSSettings">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="text">
+       <string>Настроить парсинг JS</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>260</y>
+     <width>334</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_11">
+    <item>
+     <widget class="QLabel" name="labelFixURL">
+      <property name="text">
+       <string>Правка url адресов:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBoxIsExistingUrl">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Рекомендуется отключать эту опцию, когда количество базовых URL равно одному. Если количество базовых URL больше одного, то рекомендуется включать.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Проверять существование URL после исправления</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboCorrectBaseUrl">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При вводе нескольких базовых URL и не активном check-box будет использоваться первый введенный базовый URL. Однако проверка существования URL замедляет программу и ее лучше не ипользовать. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboBoxRegExpr</sender>
+   <signal>activated(QString)</signal>
+   <receiver>ParseSetting</receiver>
+   <slot>addRegExpForParse(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>450</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxParseDepth</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>spinBoxParseDepth</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>518</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>531</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxTuneParseJS</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comboBoxJSRegExp</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>697</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>949</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxJSRegExp</sender>
+   <signal>activated(QString)</signal>
+   <receiver>ParseSetting</receiver>
+   <slot>addRegExpForParseJS(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>863</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1026</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxTuneParseJS</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pushParseJSSettings</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>786</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>768</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxUrlSwype</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comboEditUrlSwype</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>116</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxUrlSwype</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comboEditUrlSwypeRegExp</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>529</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboEditUrlSwypeRegExp</sender>
+   <signal>activated(QString)</signal>
+   <receiver>ParseSetting</receiver>
+   <slot>addUrlSwypeRegExp(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>529</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>483</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboCorrectBaseUrl</sender>
+   <signal>activated(QString)</signal>
+   <receiver>ParseSetting</receiver>
+   <slot>addBaseUrlForFixrelativeUrl(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>566</x>
+     <y>460</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>582</x>
+     <y>375</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxUrlSwype</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>maxNextPagesParse</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>381</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxUrlSwype</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>minNextPagesParse</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addRegExpForParse(QString)</slot>
+  <slot>setDirToSave()</slot>
+  <slot>addRegExpForParseJS(QString)</slot>
+  <slot>addUrlSwypeRegExp(QString)</slot>
+  <slot>addBaseUrlForFixrelativeUrl(QString)</slot>
+ </slots>
+</ui>
